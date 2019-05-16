@@ -33,7 +33,6 @@ class ImageScrollView: UIScrollView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
     //MARK: - Configure scrollView to display new image
     func set(image: UIImage) {
         
@@ -85,6 +84,7 @@ class ImageScrollView: UIScrollView {
         super.layoutSubviews()
         
         centerImage()
+        
     }
     
     func centerImage() {

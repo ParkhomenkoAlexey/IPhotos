@@ -16,8 +16,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
         //1. Initialize imageScrollView and adding it to viewControllers view
         imageScrollView = ImageScrollView(frame: view.bounds)
         view.addSubview(imageScrollView)

@@ -10,7 +10,6 @@ import UIKit
 
 class PhotoViewController: UIViewController {
 	
-    
     let pagePadding: CGFloat = 10
     var pagingScrollView: UIScrollView!
     
@@ -78,7 +77,6 @@ class PhotoViewController: UIViewController {
 			catch {
 				print("Unable to read image data: ", error)
 			}
-			
 		}
 		return data
 	}()
@@ -109,5 +107,4 @@ class PhotoViewController: UIViewController {
 		}
 		return CGSize.zero
 	}
-
 }
