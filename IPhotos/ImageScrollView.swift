@@ -10,6 +10,7 @@ import UIKit
 
 class ImageScrollView: UIScrollView {
     
+    var index: Int!
     var zoomView: UIImageView!
     
     lazy var zoomingTap: UITapGestureRecognizer = {
@@ -51,11 +52,12 @@ class ImageScrollView: UIScrollView {
         setMaxMinZoomScaleForCurrentBounds()
         zoomScale = minimumZoomScale
         
-        // Enable zoom tap
+        // Enable zoom tap (double tap)
         self.zoomView.addGestureRecognizer(self.zoomingTap)
         self.zoomView.isUserInteractionEnabled = true
     }
     
+    // Прописана некая логика, которая высчитывает размер изображения когда мы его приближаем или отдаляем
     func setMaxMinZoomScaleForCurrentBounds() {
         let boundsSize = bounds.size
         let imageSize = zoomView.bounds.size
@@ -110,6 +112,7 @@ class ImageScrollView: UIScrollView {
         zoomView.frame = frameToCenter
     }
     
+    
     // MARK - Strange 5 functions about screen transition
     
     // returns the center point, in image coordinate space, to try restore after rotation
@@ -156,7 +159,7 @@ class ImageScrollView: UIScrollView {
         
         self.contentOffset = offset
     }
-    
+     
     // MARK - Double tap to zoom the picture
     
     @objc func handleZoomingTap(_ sender: UITapGestureRecognizer) {

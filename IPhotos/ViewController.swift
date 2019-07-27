@@ -36,6 +36,7 @@ class ViewController: UIViewController {
         imageScrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
     }
     
+    /*
     // MARK - 3 strange function about screen transition
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -60,5 +61,6 @@ class ViewController: UIViewController {
             self.restoreStatrsForRotation(in: bounds)
         }
     }
+ */
 }
 
